@@ -125,3 +125,28 @@ console.log(`Servidor a correr em http://localhost:${PORT}`);
 });
 
 ###
+
+PS C:\Users\Aluno.CEPFSII047699\Desktop\projeto\backend-json> npm run test
+Debugger attached.
+
+> backend-json@1.0.0 test
+> echo "Error: no test specified" && exit 1
+
+"Error: no test specified"
+Waiting for the debugger to disconnect...
+PS
+
+###
+
+C:\Users\Aluno.CEPFSII047699\Desktop\projeto\backend-json> npm install
+Debugger attached.
+
+up to date, audited 71 packages in 2s
+
+29 packages are looking for funding
+run `npm fund` for details
+
+found 0 vulnerabilities
+Waiting for the debugger to disconnect...
+
+###

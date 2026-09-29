@@ -3,6 +3,10 @@
 
 
 import express from 'express';
+import cors from 'cors';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
 
 const app = express();
 const PORT = 3000;
@@ -83,6 +87,9 @@ app.post('/users', async (req, res) => {
     }
 });
 
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});
 
 // process.env.PORT || PORT;
 
@@ -92,7 +99,6 @@ app.post('/users', async (req, res) => {
 
 
 // import bodyParser from 'body-parser';
-// import cors from 'cors';
 // import dotenv from 'dotenv';
 // import mongoose from 'mongoose';
 // import routes from './routes/index.js';
