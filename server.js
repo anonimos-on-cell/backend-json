@@ -63,10 +63,10 @@ app.get('/users/:id', async (req, res) => {
 
 app.post('/users', async (req, res) => {
     try{
-        const { nome, email } = req.body;
+        const { nome, email, telefone } = req.body;
 
-        if (!nome || !email) {
-            return res.status(400).json({ error: 'Nome e email são obrigatórios' });
+        if (!nome || !email || !telefone) {
+            return res.status(400).json({ error: 'Nome, email e telefone são obrigatórios' });
         }
 
         const users = await readUsers();
@@ -74,15 +74,15 @@ app.post('/users', async (req, res) => {
             id: crypto.randomUUID(),
             nome,
             email,
-            criadoEm: new Date().toString(),
-        }
+            telefone,
+            criadoEm: new Date().toISOString(),
+        };
 
         users.push(novoUsuario);
         await writeUsers(users);
 
         res.status(201).json(novoUsuario);
-    }
-    catch (error) {
+    }catch (err) {
         res.status(500).json({ error: 'Erro ao criar usuário' });
     }
 });
