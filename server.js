@@ -1,7 +1,3 @@
-
-// Primeiro passoa chamar o express e criar uma instância do aplicativo. Em seguida, você pode configurar middlewares como bodyParser, cors e dotenv, além de importar o mongoose para conectar ao banco de dados e as rotas do seu aplicativo. Aqui está um exemplo de como o código pode ser estruturado:
-
-
 import express from 'express';
 import cors from 'cors';
 import path from 'node:path';

@@ -1,5 +1,23 @@
 ###
 
+## API de usuários
+
+Inicie o servidor com `npm start`. A API fica disponível em `http://localhost:3000`.
+
+Para listar todos os usuários, faça `GET /users`.
+
+Para cadastrar um usuário, faça `POST /users` com `Content-Type: application/json` e envie:
+
+```json
+{
+  "nome": "Maria",
+  "email": "maria@example.com",
+  "telefone": "(11) 99999-9999"
+}
+```
+
+O cadastro retorna o usuário criado, incluindo `id` e `criadoEm`. Os dados ficam em `data/users.json`.
+
 Pra criar o package.json
 
 PS C:\Users\Aluno.CEPFSsktop\projeto\backend-json>npm init -y
